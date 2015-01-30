@@ -11,13 +11,21 @@
         android:id="@+id/sprCategoria"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="41dp" />
+        android:layout_marginTop="41dp"
+        android:entries="@array/intensidades"/>
 
-    <CalendarView
+    <!--<CalendarView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/calendarView"
         android:layout_below="@+id/sprCategoria"
+        android:layout_centerHorizontal="true" />-->
+
+    <DatePicker
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/datePicker"
+        android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
     <Button
@@ -25,8 +33,19 @@
         android:layout_height="wrap_content"
         android:text="@string/btn_buscar"
         android:id="@+id/btnBuscar"
-        android:layout_centerVertical="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true" />
+
+
+
+    <!-- <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abrir secundaria"
+        android:id="@+id/btnSecundaria"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:onClick="abrirSecundaria" /> -->
 
 
 </RelativeLayout>

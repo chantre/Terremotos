@@ -3,7 +3,14 @@
 
     <string name="app_name">Terremotos</string>
     <string name="hello_world">Hello world!</string>
-    <string name="btn_buscar">New Button</string>
+    <string name="btn_buscar">Buscar</string>
+    <!-- Otra forma de cargar el spinner -->
+    <string-array name="intensidades">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
     <!-- Valores del menú -->
     <string name="action_settings">Configuración</string>
     <string name="action_help">Ayuda</string>
@@ -14,6 +21,8 @@
 
     <!-- Activity Configuración <string name="title_activity_ayuda">Ayuda</string> -->
 
+    <!-- Activity Lista de terremotos -->
     <string name="title_activity_lista">Lista de terremotos</string>
+    <string name="lista_vacia">Lista de terremotos vacía</string>
 
 </resources>
