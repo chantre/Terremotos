@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Terremotos</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="btn_buscar">New Button</string>
+    <!-- Valores del menú -->
+    <string name="action_settings">Configuración</string>
+    <string name="action_help">Ayuda</string>
+
+    <!-- Activity Ayuda -->
+    <string name="title_activity_ayuda">Ayuda</string>
+    <string name="texto_ayuda">Una parrafada para explicar como funciona la app</string>
+
+    <!-- Activity Configuración <string name="title_activity_ayuda">Ayuda</string> -->
+
+    <string name="title_activity_lista">Lista de terremotos</string>
+
+</resources>
