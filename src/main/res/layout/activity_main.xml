@@ -27,6 +27,8 @@
         android:entries="@array/intensidades"
         android:spinnerMode="dialog"
         android:layout_toRightOf="@+id/tvCategoria"
+        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:gravity="center"/>
 
     <!--<CalendarView

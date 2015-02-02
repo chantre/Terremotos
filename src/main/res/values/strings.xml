@@ -25,4 +25,20 @@
     <string name="title_activity_lista">Lista de terremotos</string>
     <string name="lista_vacia">Lista de terremotos vacía</string>
 
+    <!-- Activity Setttings -->
+    <string name="url_pref">url_pref</string>
+    <string name="url_pref_title">url de referencia</string>
+    <string name="url_pref_summary">Introduce la url de la que obtener los datos</string>
+    <string name="frecuencia">frecuencia</string>
+    <string name="frecuencia_title">Frecuencia de obtención de datos</string>
+    <string name="frecuencia_summary">Frecuencia de obtención de los datos del servidor</string>
+    <!-- Valores de las preferencias -->
+    <!-- Son los el. que van a salir en la lista del dialog -->
+    <string-array name="frecuencias_entries">
+        <item>Minuto</item>
+        <item>Día</item>
+        <item>Semana</item>
+        <item></item>
+    </string-array>
+
 </resources>
