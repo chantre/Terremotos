@@ -21,6 +21,7 @@
 
     <!-- Activity Configuración <string name="title_activity_ayuda">Ayuda</string> -->
 
+
     <!-- Activity Lista de terremotos -->
     <string name="title_activity_lista">Lista de terremotos</string>
     <string name="lista_vacia">Lista de terremotos vacía</string>
@@ -29,6 +30,7 @@
     <string name="url_pref">url_pref</string>
     <string name="url_pref_title">url de referencia</string>
     <string name="url_pref_summary">Introduce la url de la que obtener los datos</string>
+    <string name="url_value">http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.atom</string>
     <string name="frecuencia">frecuencia</string>
     <string name="frecuencia_title">Frecuencia de obtención de datos</string>
     <string name="frecuencia_summary">Frecuencia de obtención de los datos del servidor</string>
@@ -38,7 +40,20 @@
         <item>Minuto</item>
         <item>Día</item>
         <item>Semana</item>
-        <item></item>
+        <item>Mes</item>
+        <item>Nunca</item>
     </string-array>
+    <!-- Son los el. que van a salir en la lista del dialog -->
+    <!-- A CAMBIAR -->
+    <string-array name="frecuencias_entries_values">
+        <item>Minuto</item>
+        <item>Día</item>
+        <item>Semana</item>
+        <item>Mes</item>
+        <item>Nunca</item>
+    </string-array>
+
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_detalle">DetalleActivity</string>
 
 </resources>

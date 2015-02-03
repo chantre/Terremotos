@@ -21,12 +21,16 @@
             android:label="@string/title_activity_ayuda" >
         </activity>
         <activity
-            android:name=".SettingsActivityFragment"
+            android:name=".ListaActivity"
+            android:label="@string/title_activity_lista" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
         <activity
-            android:name=".ListaActivity"
-            android:label="@string/title_activity_lista" >
+            android:name=".DetalleActivity"
+            android:label="@string/title_activity_detalle" >
         </activity>
     </application>
 

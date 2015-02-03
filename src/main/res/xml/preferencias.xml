@@ -4,26 +4,13 @@
         android:key="@string/url_pref"
         android:title="@string/url_pref_title"
         android:summary="@string/url_pref_summary"
-        android:dialogTitle="@string/url_pref_title"/>
+        android:dialogTitle="@string/url_pref_title"
+        android:text="@string/url_value"/>
     <ListPreference
         android:key="@string/frecuencia"
         android:title="@string/frecuencia_title"
         android:summary="@string/frecuencia_summary"
         android:dialogTitle="@string/frecuencia_title"
-        />
+        android:entries="@array/frecuencias_entries"
+        android:entryValues="@array/frecuencias_entries_values" />
 </PreferenceScreen>
-    <!--<EditTextPreference
-        android:key="@string/key_prefijo"
-        android:title="Prefijo"
-        android:summary="Este parámetro se emplea para meter el prefijo del saludo"
-        android:dialogTitle="Escriba aquí el prefijo"
-        />
-    <ListPreference
-        android:key="@string/key_sufijo"
-        android:title="Sufijo"
-        android:summary="Este parámetro se emplea para meter el sufijo del saludo"
-        android:dialogTitle="Escriba aquí el sufijo"
-        android:entries="@array/sufijosEntries"
-        android:entryValues="@array/sufijosEntriesValues"
-        />
-        -->

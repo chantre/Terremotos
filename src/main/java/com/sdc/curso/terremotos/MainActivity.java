@@ -1,6 +1,8 @@
 package com.sdc.curso.terremotos;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -10,6 +12,8 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.Spinner;
+
+import java.util.Set;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -49,6 +53,14 @@ public class MainActivity extends ActionBarActivity {
 
         //inicializarCalendar();
         dpFecha.setCalendarViewShown(false);
+
+
+        /*************************************************************
+         * INICIALIZAR EL VALOR DE LA URL
+         */
+        /*SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+
+        Set<String> stringSet = preferences.getStringSet(R.string.url_pref, getResources().getString(R.string.url_value));*/
     }
 
     /*public void inicializarCalendar() {
@@ -104,7 +116,7 @@ public class MainActivity extends ActionBarActivity {
 
             MainActivity.this.startActivity(intentHelp);
         }else if (id == R.id.action_settings) {
-            Intent intentSettings = new Intent(MainActivity.this, SettingsActivityFragment.class);
+            Intent intentSettings = new Intent(MainActivity.this, SettingsActivity.class);
 
             MainActivity.this.startActivity(intentSettings);
         }
