@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lavender">
+    <!--
+        this.ubicacion = ubicacion;
+        this.magnitud = magnitud;
+        this.fecha = fecha;
+        this.coordNorte = coordNorte;
+        this.coordOeste = coordSur;
+        this.profundidad = profundidad;
+    -->
+
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicación"
+            android:id="@+id/labelUbicacion" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvUbicacion"
+            android:layout_gravity="center_horizontal"
+            android:layout_column="3" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Magnitud"
+            android:id="@+id/textViewMagnitud" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvMagnitud"
+            android:layout_gravity="center_horizontal"
+            android:layout_column="3" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha"
+            android:id="@+id/textViewFecha" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvFecha"
+            android:layout_gravity="center_horizontal"
+            android:layout_column="3" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Coordenadas"
+            android:id="@+id/textViewCoordenadas" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCoordenadas"
+            android:layout_gravity="center_horizontal"
+            android:layout_column="3" />
+    </TableRow>
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profundidad"
+            android:id="@+id/textViewProfundidad" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvProfundidad"
+            android:layout_gravity="center_horizontal"
+            android:layout_column="3" />
+    </TableRow>
+
+</TableLayout>
