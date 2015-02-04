@@ -48,7 +48,7 @@ public class ListadoFragment extends Fragment {
                         "62.151", "147.562", 71.4f),
                 new Terremoto("78km ENE of Sutton-Alpine, Alaska", 1.2f, "2015-02-03",
                         "62.151", "147.562", 71.4f));*/
-        CargarListado();
+        cargarListado();
 
         /*lvCorreos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -60,7 +60,7 @@ public class ListadoFragment extends Fragment {
         });*/
     }
 
-    public void CargarListado() {
+    public void cargarListado() {
         List<Terremoto> terremotos = Arrays.asList(
                 new Terremoto("78km ENE of Sutton-Alpine, Alaska", "1.2", "2015-02-03"),
                 new Terremoto("85km NE of Sutton-Alpine, Yellowstone", "2.2", "2015-02-03"),
