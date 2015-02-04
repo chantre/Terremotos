@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 
-public class ListaActivity extends ListActivity {
+public class ListaActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

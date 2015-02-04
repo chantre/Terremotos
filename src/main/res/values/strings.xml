@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">Terremotos</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello world detalle!</string>
     <string name="btn_buscar">Buscar</string>
     <!-- Otra forma de cargar el spinner -->
     <string-array name="intensidades">

@@ -1,5 +1,6 @@
 package com.sdc.curso.terremotos;
 
+import android.app.Fragment;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
@@ -8,25 +9,32 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.Set;
 
 
 public class MainActivity extends ActionBarActivity {
 
-    public static final int REQUEST_CODE_SEC_CON_RES = 0;
-    Button btnBuscar, btnSecundaria;
-    CalendarView calFecha;
+    private Button btnBuscar;
+    //CalendarView calFecha;
+    private BusquedaFragment fragmentBusqueda;
+    private ListadoFragment fragmentListado;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Spinner spinnerCategoria = (Spinner)findViewById(R.id.sprCategoria);
+
+        //getFragmentManager().findFragmentById(R.id.fragmentListado);
+        fragmentBusqueda = (BusquedaFragment) getFragmentManager().findFragmentById(R.id.fragmentBusqueda);
+        fragmentListado = (ListadoFragment) getFragmentManager().findFragmentById(R.id.fragmentListado);
+        /*Spinner spinnerCategoria = (Spinner)findViewById(R.id.sprCategoria);
 
         DatePicker dpFecha = (DatePicker)findViewById(R.id.datePicker);
         //  CalendarView
@@ -41,7 +49,7 @@ public class MainActivity extends ActionBarActivity {
 
                 MainActivity.this.startActivity(intent);
             }
-        });
+        });*/
 
         /*//  cargamos el spinner
         //  Creamos el adaptador
@@ -52,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
         spinnerCategoria.setAdapter(adapter);*/
 
         //inicializarCalendar();
-        dpFecha.setCalendarViewShown(false);
+        //dpFecha.setCalendarViewShown(false);
 
 
         /*************************************************************
@@ -63,38 +71,57 @@ public class MainActivity extends ActionBarActivity {
         Set<String> stringSet = preferences.getStringSet(R.string.url_pref, getResources().getString(R.string.url_value));*/
     }
 
-    /*public void inicializarCalendar() {
-        calFecha = (CalendarView) findViewById(R.id.calendarView);
+    @Override
+    protected void onResume() {
+        super.onResume();
 
-        // sets whether to show the week number.
-        calFecha.setShowWeekNumber(false);
+        fragmentBusqueda.setOnClickListener(new View.OnClickListener() {
 
-        // sets the first day of week according to Calendar.
-        // here we set Monday as the first day of the Calendar
-        calFecha.setFirstDayOfWeek(2);
 
-        //The background color for the selected week.
-        *//*calFecha.setSelectedWeekBackgroundColor(getResources().getColor(R.color.material_blue_grey_800));
-
-        //sets the color for the dates of an unfocused month.
-        calFecha.setUnfocusedMonthDateColor(getResources().getColor(R.color.switch_thumb_normal_material_dark));
-
-        //sets the color for the separator line between weeks.
-        calFecha.setWeekSeparatorLineColor(getResources().getColor(R.color.switch_thumb_normal_material_dark));
-
-        //sets the color for the vertical bar shown at the beginning and at the end of the selected date.
-        calFecha.setSelectedDateVerticalBar(R.color.switch_thumb_normal_material_light);*//*
-
-        //sets the listener to be notified upon selected date change.
-        calFecha.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            //show the selected date as a toast
             @Override
-            public void onSelectedDayChange(CalendarView view, int year, int month, int day) {
-                Toast.makeText(getApplicationContext(), day + "/" + month + "/" + year, Toast.LENGTH_LONG).show();
+            public void onClick(View v) {
+                if (fragmentListado != null){
+                    //  tablet
+                    //fragmentListado.actualizar(item);
+                    Toast.makeText(MainActivity.this, "Hola", Toast.LENGTH_SHORT).show();
+                    fragmentListado.CargarListado();
+                }else{
+                    //  smartphone
+                    Intent intent = new Intent(MainActivity.this, ListaActivity.class);
+
+                    //intent.putExtra("correo", item);
+                    startActivity(intent);
+                }
             }
         });
-    }*/
 
+        fragmentListado.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Terremoto terremoto = (Terremoto) parent.getItemAtPosition(position);
+                Intent intent = new Intent(MainActivity.this, DetalleActivity.class);
+
+                intent.putExtra("terremoto", terremoto);
+                startActivity(intent);
+            }
+        });
+            /*@Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                CorreoElectronico item = (CorreoElectronico) parent.getItemAtPosition(position);
+
+                if (fragmentoDetalle != null){
+                    //  tablet
+                    fragmentoDetalle.actualizar(item);
+                }else{
+                    //  smartphone
+                    Intent intent = new Intent(MainActivity.this, DetalleActivity.class);
+
+                    intent.putExtra("correo", item);
+                    startActivity(intent);
+                }
+            }
+        });*/
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -123,23 +150,4 @@ public class MainActivity extends ActionBarActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
-    /*public void abrirSecundaria(View view) {
-        Intent intent = new Intent(this, ConResultadoActivity.class);
-
-        this.startActivityForResult(intent, REQUEST_CODE_SEC_CON_RES);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-
-        if (requestCode == REQUEST_CODE_SEC_CON_RES){
-            if(resultCode ==  Activity.RESULT_OK) {
-                //btnSecundaria.setText(data.getStringExtra("dato"));
-
-                Toast.makeText(this, data.getStringExtra("dato"), Toast.LENGTH_LONG).show();
-            }
-        }
-    }*/
 }

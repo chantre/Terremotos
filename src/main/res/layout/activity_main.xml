@@ -9,16 +9,18 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".MainActivity"
     android:background="@color/lavender">
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.sdc.curso.terremotos.BusquedaFragment"
+        android:id="@+id/fragmentBusqueda" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/tvCategoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:text="Categorías"/>
-    <!--
-        android:layout_alignRight="@+id/sprCategoria"
-        android:layout_alignEnd="@+id/sprCategoria"-->
     <Spinner
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,14 +32,6 @@
         android:layout_marginLeft="40dp"
         android:layout_marginStart="40dp"
         android:gravity="center"/>
-
-    <!--<CalendarView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/calendarView"
-        android:layout_below="@+id/sprCategoria"
-        android:layout_centerHorizontal="true" />-->
-
     <DatePicker
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,18 +45,6 @@
         android:text="@string/btn_buscar"
         android:id="@+id/btnBuscar"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
-
-
-
-    <!-- <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Abrir secundaria"
-        android:id="@+id/btnSecundaria"
-        android:layout_centerVertical="true"
-        android:layout_alignParentRight="true"
-        android:onClick="abrirSecundaria" /> -->
-
+        android:layout_centerHorizontal="true" /> -->
 
 </RelativeLayout>
